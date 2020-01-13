@@ -13,6 +13,16 @@ class StarRating extends Component {
         };
         this.change = this.change.bind(this)
     }
+
+    static defaultProps = {
+        totalStars: 5
+    };
+
+    static propTypes = {
+        totalStars: PropTypes.number
+    };
+
+
     change(starsSelected) {
         this.setState({starsSelected})
     }
@@ -32,11 +42,5 @@ class StarRating extends Component {
         );
     }
 }
-StarRating.propTypes = {
-    totalStars: PropTypes.number
-};
-StarRating.defaultProps = {
-    totalStars: 5
-};
 
 export default StarRating;

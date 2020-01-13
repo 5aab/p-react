@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import StarRating from "./StarRating";
+import AddColorForm from "./AddColorForm";
+import {logColor} from "./AppUtils";
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <StarRating/>
+        <AddColorForm onNewColor={logColor}/>
       </header>
     </div>
   );
