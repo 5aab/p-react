@@ -1,8 +1,7 @@
 import React from "react";
-import {Component} from "react";
 import Star from "./Star"
 import './Star.css';
-import PropTypes from 'prop-types';
+import './Color.css'
 
 
 const StarRating = ({starsSelected=0, totalStars=5, onRate=f=>f}) =>
@@ -28,7 +27,7 @@ const Color = ({title,color,rating=0,onRemove=f=>f,onRate=f=>f}) =>
     </section>;
 
 const ColorList = ({ colors=[], onRate=f=>f, onRemove=f=>f }) =>
-    <div className="color-list">
+    <div className="flex-container">
         {(colors.length === 0) ?
             <p>No Colors Listed. (Add a Color)</p> :
             colors.map(color =>
