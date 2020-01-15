@@ -19,7 +19,7 @@ const Color = ({title,color,rating=0,onRemove=f=>f,onRate=f=>f}) =>
         <h1>{title}</h1>
         <button onClick={onRemove}>X</button>
         <div className="color"
-             style={{ backgroundColor: color }}>
+             style={{ backgroundColor: color , borderRadius: "10px" }}>
         </div>
         <div>
             <StarRating starsSelected={rating} onRate={onRate} />
